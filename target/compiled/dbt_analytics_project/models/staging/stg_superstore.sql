@@ -1,0 +1,22 @@
+select
+    "Order ID" as order_id,
+    cast("Order Date" as date) as order_date,
+    cast("Ship Date" as date) as ship_date,
+    "Ship Mode" as ship_mode,
+    "Customer ID" as customer_id,
+    "Customer Name" as customer_name,
+    "Segment" as segment,
+    "Country" as country,
+    "City" as city,
+    "State" as state,
+    cast("Postal Code" as text) as postal_code,
+    "Region" as region,
+    "Product ID" as product_id,
+    "Category" as category,
+    "Sub-Category" as sub_category,
+    "Product Name" as product_name,
+    cast("Sales" as float) as sales,
+    cast("Quantity" as int) as quantity,
+    cast("Discount" as float) as discount,
+    cast("Profit" as float) as profit
+from main."Sample_Superstore"
