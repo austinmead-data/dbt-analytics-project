@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: int_customer_first_order_date
+    description: >
+      Intermediate model that identifies each customer's first order date.
+      Derives the earliest order date per customer and provides week- and
+      month-level rollups for downstream customer analytics and lifecycle analysis.
+
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer"
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: "Full name of the customer"
+
+      - name: first_order_date
+        description: "The date of the customer's first recorded order"
+        tests:
+          - not_null
+
+      - name: first_order_week
+        description: "Week (date truncated) in which the customer's first order occurred"
+
+      - name: first_order_month
+        description: "Month (date truncated) in which the customer's first order occurred"

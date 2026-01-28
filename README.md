@@ -16,15 +16,3 @@ This project simulates building analytics pipelines and data models for a fictio
 - **Git/GitHub** for version control
 - Optional: Python for data generation or tests
 
-## Structure
-
-dbt-analytics-project/
-├── models/         # dbt models
-├── seeds/          # sample datasets (CSV)
-├── snapshots/      # if using dbt snapshots
-├── analyses/       # example analyses or queries
-├── tests/          # tests for your models
-├── macros/         # reusable macros
-├── logs/           # dbt run/log files
-├── data/           # local SQLite or other database files
-└── README.md       # this file
